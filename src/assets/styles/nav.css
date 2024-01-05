@@ -1,0 +1,117 @@
+nav{
+    background-color: #0b0501;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #9e7042;
+    padding: 20px;
+    padding-bottom: 50px;
+    height: 90px;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    position: relative;
+    left: 1000px;
+    bottom: 9px;
+    padding: 20px;
+}
+li:hover:not(.active){
+    background-color: rgba(20, 14, 1, 0.97);
+    color: rgb(50, 30, 9);
+    height: 50px;
+}
+.active{
+    background-color: rgba(0, 0, 0, 0.559);
+}
+input{
+    margin-right: 5px;
+}
+.Btn{
+    background-color: #1d1203;
+    color: #704810; 
+    padding: 30px 10px;
+    float:right;
+    position:relative;
+    bottom: 500px;
+    left: 340px;
+    text-decoration: none;
+}
+
+.link{
+    color: #96723f; 
+    padding: 0px;
+    float:left;
+    text-decoration: none;
+}
+.lin{
+    color: #1d1203;
+}
+.void{
+    background-color: rgba(12, 12, 12, 0.149);
+    display: inline-block;
+    padding: 90px;
+    width: 700px;
+    text-decoration: burlywood;
+}
+.parentDiv{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    
+}
+form{
+    text-align: left;
+   margin-top: 10px;
+    padding-left: 20px;
+    margin-right: 40px;
+}
+.card{
+    display: inline-block;
+    
+}
+.frm{
+    text-align:left;
+    position:relative;
+    bottom: 500px;
+    left: 340px;
+}
+.bgm{
+    position: relative;
+    bottom: 33px;
+    right: 30px;
+}
+.nln{
+    color:#704810;
+}
+.nnn{
+    background-color: #1d1203;
+    color:#eed9bc;
+    overflow: hidden;
+}
+.c1{
+    position: absolute; left: 0px; top: 0px; border: solid 2px #555; width:594px; height:332px;
+}
+.c2{
+    overflow: hidden; margin-top: -100px; margin-left: -25px;
+}
+.c3{
+    height: 2000px;
+    overflow: hidden;
+     border: 0px none; 
+     width: 1540px; 
+     margin-top: -60px; 
+     margin-left: -24px;
+}
+.c4{
+    text-align: center; -webkit-overflow-scrolling: touch; overflow: auto;
+}
+#cit-iframe iframe {
+    height: 900px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    }

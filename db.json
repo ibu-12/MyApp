@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "firstName": "Mohamed",
+      "lastName": "Ibrahim",
+      "username": "Ibu",
+      "email": "22cse.mohamedibrahim.h@skct.edu.in",
+      "password": "Mohamed@2004",
+      "confirmPassword": "Mohamed@2004",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "firstName": "Mohame",
+      "lastName": "Ib",
+      "username": "jjj",
+      "email": "727822tucs113@skct.edu.in",
+      "password": "Moh@12345",
+      "confirmPassword": "Moh@12345",
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "params": {
+        "username": "22cse.mohamedibrahim.h@skct.edu.in",
+        "password": "Mohamed@2004"
+      },
+      "id": 3
+    }
+  ]
+}
