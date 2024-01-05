@@ -209,6 +209,7 @@ const RegisterForm = () => {
       // If no existing user found, proceed with registration
       const response = await axios.post('http://localhost:3001/users', formData);
       console.log('Registration successful!', response.data);
+      window.location.href='/siIn'
       // Redirect or handle success as needed
     } catch (error) {
       console.error('Registration failed!', error);
@@ -246,7 +247,22 @@ const RegisterForm = () => {
       }
       return errors;
     };
-
+    const theme = createTheme({
+      palette: {
+        primary: {
+          main: 'rgb(50, 30, 9)',
+          // light: will be calculated from palette.primary.main,
+          // dark: will be calculated from palette.primary.main,
+          // contrastText: will be calculated to contrast with palette.primary.main
+        },
+        secondary: {
+          main: 'rgb(50, 30, 9)',
+          light: 'rgb(50, 30, 9)',
+          // dark: will be calculated from palette.secondary.main,
+          contrastText: '#96723f',
+        },
+      },
+    });
     return (
       <div style={{
             marginLeft: '450px',
@@ -259,29 +275,32 @@ const RegisterForm = () => {
             overflow:'hidden',
             fontFamily: 'URW Chancery L, cursive',
             borderRadius: '30px'}}>
+              
           <form onSubmit={handleSubmit}>
             <h3>Registration Form</h3>
-            
-              <input
+            <br/>
+              <TextField input
                 type="text"
                 name="firstName"
                 placeholder="First Name"
                 onChange={handleChange}
-                className="form-control"
-              />
+                size='small'
+                variant='standard'
+              /><br/>
               {errors.firstName && (
                 <span className="error">
                   <i className="zmdi zmdi-close-circle"></i> {errors.firstName}
                 </span>
               )}
               <br/>
-              <input
+              <TextField input
                 type="text"
                 name="lastName"
                 placeholder="Last Name"
                 onChange={handleChange}
-                className="form-control"
-              />
+                size='small'
+                variant='standard'
+              /><br/>
               {errors.lastName && (
                 <span className="error">
                   <i className="zmdi zmdi-close-circle"></i> {errors.lastName}
@@ -289,13 +308,14 @@ const RegisterForm = () => {
               )}
             
             <br/>
-              <input
+              <TextField input
                 type="text"
                 name="username"
                 placeholder="Username"
                 onChange={handleChange}
-                className="form-control"
-              />
+                size='small'
+                variant='standard'
+              /><br/>
               {errors.username && (
                 <span className="error">
                   <i className="zmdi zmdi-close-circle"></i> {errors.username}
@@ -303,13 +323,14 @@ const RegisterForm = () => {
               )}
             
             <br/>
-              <input
+              <TextField input
                 type="email"
                 name="email"
                 placeholder="Email"
                 onChange={handleChange}
-                className="form-control"
-              />
+                size='small'
+                variant='standard'
+              /><br/>
               {errors.email && (
                 <span className="error">
                   <i className="zmdi zmdi-close-circle"></i> {errors.email}
@@ -317,14 +338,14 @@ const RegisterForm = () => {
               )}
             
             <br/>
-              <select id="" className="form-control" name="gender" onChange={handleChange}>
+              <select id="" className='sel' name="gender" onChange={handleChange}>
                 <option value="" disabled selected>
                   Gender
                 </option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
-              </select>
+              </select><br/>
               {errors.gender && (
                 <span className="error">
                   <i className="zmdi zmdi-close-circle"></i> {errors.gender}
@@ -332,13 +353,14 @@ const RegisterForm = () => {
               )}
             
             <br/>
-              <input
+              <TextField input
                 type="password"
                 name="password"
                 placeholder="Password"
                 onChange={handleChange}
-                className="form-control"
-              />
+                size='small'
+                variant='standard'
+              /><br/>
               {errors.password && (
                 <span className="error">
                   <i className="zmdi zmdi-close-circle"></i> {errors.password}
@@ -346,13 +368,14 @@ const RegisterForm = () => {
               )}
             <br/>
             
-              <input
+              <TextField input
                 type="password"
                 name="confirmPassword"
                 placeholder="Confirm Password"
                 onChange={handleChange}
-                className="form-control"
-              />
+                size='small'
+                variant='standard'
+              /><br/>
               {errors.confirmPassword && (
                 <span className="error">
                   <i className="zmdi zmdi-close-circle"></i> {errors.confirmPassword}
@@ -362,17 +385,24 @@ const RegisterForm = () => {
            <br/>
               <p>
                 Already have an account?{' '}
-                <Link to="/login" className="lin">
+                <Link to="/siIn" className="lin">
                   Login
                 </Link>
               </p>
            
-            <button className="glow-on-hover" type="submit">
-              Register
-              <i className="zmdi zmdi-arrow-right" />
-            </button>
+            
+            <ThemeProvider theme={theme}>
+                <Button variant='contained' color='secondary' sx={{ ml: 3 }} type='submit'>Register</Button>
+                </ThemeProvider> 
           </form>
-        
+          <div style={{
+                marginRight: '500px',
+                position:'absolute',
+                left:'770px',
+                bottom: '80px'
+             }}>
+             <img src={my} height='500px' width='400px'></img>
+             </div>
       </div>
     );
   };

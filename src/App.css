@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   /* background: url("C:\Users\ibu\Desktop\reactDemo\myapp\src\assest\bg4.jpg"); */
-  background-color: #704810bb;
+  background-color: rgba(50, 30, 9, 0.699);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;

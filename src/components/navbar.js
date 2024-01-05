@@ -3,8 +3,6 @@ import {BrowserRouter as Router, Routes,Route,Link } from 'react-router-dom'
 import {Button,createTheme,ThemeProvider,TextField} from '@mui/material'
 import me from '../assest/l1.png';
 import Home from './Home';
-import Login from './login';
-import Register from './Register';
 import Contact from './contact';
 import { Bussiness, Education, Entertainment, News, Sports, Techno } from './cards';
 import RegistrationForm from './signup';
@@ -100,8 +98,6 @@ function Navbar()
             </div>
             <Routes>
                 <Route exact path='/' element={<Home/>}/>
-                <Route exact path='/login' element={<Login/>}/>
-                <Route exact path='/register' element={<Register/>}/>
                 <Route exact path='/cnt' element={<Contact/>}/>
                 <Route exact path='/ls' element={<Ls/>} />
                 <Route exact path='/rs' element={<Rs/>} />

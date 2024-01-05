@@ -105,8 +105,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
-
+import my from '../assest/logo22.jpg';
+import '../assets/styles/nav.css';
+import {Button,createTheme,ThemeProvider,TextField} from '@mui/material';
+// import { Button } from 'bootstrap';
 const Login = () => {
   const [credentials, setCredentials] = useState({
     username: '',
@@ -136,10 +138,12 @@ const Login = () => {
       });
       if (response.data.length > 0) {
         console.log('Login successful!');
+        window.location.href='/'
         // Redirect or handle successful login
       } else {
         console.log('Login failed! Invalid credentials.');
         // Handle invalid login
+        
       }
     } catch (error) {
       console.error('Login failed!', error);
@@ -157,54 +161,83 @@ const Login = () => {
     }
     return errors;
   };
-
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: 'rgb(50, 30, 9)',
+        // light: will be calculated from palette.primary.main,
+        // dark: will be calculated from palette.primary.main,
+        // contrastText: will be calculated to contrast with palette.primary.main
+      },
+      secondary: {
+        main: 'rgb(50, 30, 9)',
+        light: 'rgb(50, 30, 9)',
+        // dark: will be calculated from palette.secondary.main,
+        contrastText: '#96723f',
+      },
+    },
+  });
   return (
     <div style={{
       marginLeft: '450px',
-      marginTop: '25px',
+      marginTop: '10px',
       backgroundColor: '#3a16014b',
       textAlign: 'left',
       color: 'rgb(50, 30, 9)',
       padding: '10px 50px',
       width: '750px',
-      height: '570px',
+      height: '590px',
       overflow:'hidden',
       fontFamily: 'URW Chancery L, cursive',
       borderRadius: '30px'
   }}>
       <div className="inner">
-        
+      
         <form className="form" onSubmit={handleSubmit}>
-          <h3>Login</h3>
+          <br/>
+          <h3>Login Form</h3>
           <br/>
           <div className="form-wrapper">
-            <input
+            <TextField input
               type="text"
               name="username"
               onChange={handleChange}
               placeholder="Username or Email"
-              className="form-control"
+              
             />
+            <br/>
             {errors.username && <span className="error">{errors.username}</span>}
           </div>
           <br/>
           <div className="form-wrapper">
-            <input
+            <TextField input
               type="password"
               name="password"
               onChange={handleChange}
               placeholder="Password"
-              className="form-control"
+              
             />
+            <br/>
             {errors.password && <span className="error">{errors.password}</span>}
           </div>
           <br/>
           <div>
-            <p>Don't have an account <Link to='/register' className='lin'>Signup</Link></p>
+            <p>Don't have an account <Link to='/siup' className='lin'>Signup</Link></p>
           </div>
 
-          <button className="glow-on-hover" type='submit'>Login</button>
+          
+          <ThemeProvider theme={theme}>
+                <Button variant='contained' color='secondary' sx={{ ml: 3 }} type='submit'>LOGIN</Button>
+                </ThemeProvider> 
         </form>
+        <div style={{
+                marginRight: '500px',
+                position:'absolute',
+                left:'770px',
+                bottom: '80px'
+             }}>
+             <img src={my} height='500px' width='400px'></img>
+             </div>
       </div>
     </div>
   );

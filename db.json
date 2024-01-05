@@ -26,6 +26,46 @@
         "password": "Mohamed@2004"
       },
       "id": 3
+    },
+    {
+      "username": "Ibu",
+      "password": "Mohamed@2004",
+      "id": 4
+    },
+    {
+      "username": "Ibu",
+      "password": "Mohamed@2004",
+      "id": 5
+    },
+    {
+      "username": "Ibu",
+      "password": "Mohamed@2004",
+      "id": 6
+    },
+    {
+      "username": "Ibu",
+      "password": "Mohamed@2004",
+      "id": 7
+    },
+    {
+      "username": "22cse.mohamedibrahim.h@skct.edu.in",
+      "password": "Mohamed@2004",
+      "id": 8
+    },
+    {
+      "username": "22cse.mohamedibrahim.h@skct.edu.in",
+      "password": "Mohamed@2004",
+      "id": 9
+    },
+    {
+      "firstName": "Mohamed",
+      "lastName": "Ibrahim",
+      "username": "MI",
+      "email": "727822tuam016@skct.edu.in",
+      "password": "Mohamed@2004",
+      "confirmPassword": "Mohamed@2004",
+      "gender": "male",
+      "id": 10
     }
   ]
 }

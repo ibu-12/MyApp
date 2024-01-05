@@ -29,13 +29,9 @@ input{
     margin-right: 5px;
 }
 .Btn{
-    background-color: #1d1203;
+    background-color:rgb(50, 30, 9);
     color: #704810; 
-    padding: 30px 10px;
-    float:right;
-    position:relative;
-    bottom: 500px;
-    left: 340px;
+    
     text-decoration: none;
 }
 
@@ -67,6 +63,7 @@ form{
    margin-top: 10px;
     padding-left: 20px;
     margin-right: 40px;
+    margin-bottom: 100px;
 }
 .card{
     display: inline-block;
@@ -115,3 +112,19 @@ form{
     padding: 0;
     border: none;
     }
+.m20{
+    float: left;
+    position: relative;
+    bottom: 150px;
+}
+.m21{
+    position: relative;
+    bottom: 100px;
+}
+.sel{
+    background-color: #3a16014b;
+    color: #0b050171;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+}
